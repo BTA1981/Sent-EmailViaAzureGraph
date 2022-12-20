@@ -2,12 +2,12 @@
 # This test script works by authenticating via token (if you want to use a password) and can be changed to authenticate via Certificate
 
 
-$AppID = "0a8e4424-56ea-42b4-8926-3a09fad36cbb" # App ID NK_SendEmailScript App registration
+$AppID = "" # App ID App registration
 $tenantID = "e71710f3-ac90-4283-966f-0b9be5d0cd17"
 #$thumbprint = ""
-$O365Organisation = "novadickentron.onmicrosoft.com"
-$CredPath = "C:\Beheer\Scripts\New-EverWorkAccount\NK\Credentials\NKazureGraph_.xml"
-$KeyFilePath = "C:\Beheer\Scripts\New-EverWorkAccount\NK\Credentials\NKazureGraph_.key"
+$O365Organisation = ""
+$CredPath = "azureGraph_.xml"
+$KeyFilePath = "azureGraph_.key"
 
 #region Decrypt password
 $Key = Get-Content $KeyFilePath
@@ -43,8 +43,8 @@ Connect-MgGraph -AccessToken $token
 
 [string]$EmailTemplate1 = 'C:\Beheer\NewUserEmailHTML.html'	
 	
-$user = "client@novadic-kentron.nl"
-$name = "Eshgro"
+$user = ""
+$name = ""
 $company = "test"
 $subject = "test mail"
 $type = "html"
